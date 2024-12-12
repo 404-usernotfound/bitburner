@@ -60,17 +60,17 @@ export async function main(ns) {
 
       // grow batch
       if (growThreads > 0) {
-        ns.exec("main/grow.js", currentServer, growThreads, 20, currentTarget);
+        ns.exec("_grow.js", currentServer, growThreads, 20, currentTarget);
       }
 
       // weak batch 2 electric boogaloo
       if (wekaThreads > 0) {
-        ns.exec("main/weak.js", currentServer, wekaThreads, 40, currentTarget);
+        ns.exec("_weak.js", currentServer, wekaThreads, 40, currentTarget);
       }
 
       // hack batch
       if (hackThreads > 0) {
-        ns.exec("main/hack.js", currentServer, hackThreads, 80, currentTarget);
+        ns.exec("_hack.js", currentServer, hackThreads, 80, currentTarget);
       }
     }
   }
