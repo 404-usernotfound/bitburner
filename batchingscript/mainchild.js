@@ -3,7 +3,9 @@ export async function main(ns) {
   while (ns.isRunning("prepserv.js", ns.args[1])) {
     await ns.sleep(10000)
   }
-  var servers = ns.args[0]
+  
+  let servers = ["home"]
+  
   for (var i = 0; i < servers.length; i++) {
     let currentServer = servers[i]
     let scriptRam = 2
